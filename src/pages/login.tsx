@@ -3,9 +3,11 @@ import { Route, Redirect } from "react-router";
 import Home from "./Home";
 import template from "./Template";
 
-const Menu: React.FC = () => {
-    const path = [
-        {name: 'Home', url:'/app/home', icon:homeOutline}
+const Login: React.FC = () => {
+    const navigation = useIonRouter();
+
+    const dologin = () => {
+        navigation.push('/app', 'forward', 'replace');
 
     ];
      return (
