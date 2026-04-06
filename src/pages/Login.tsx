@@ -11,9 +11,6 @@ const Login: React.FC = () => {
         <IonPage>
                 <IonHeader>
                     <IonToolbar>
-                        <IonButtons>
-                            <IonMenuButton></IonMenuButton>
-                        </IonButtons>
                         <IonTitle>Login</IonTitle>
                     </IonToolbar>
                 </IonHeader>
