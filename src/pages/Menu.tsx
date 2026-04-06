@@ -36,7 +36,7 @@ const Menu: React.FC = () => {
                 </IonContent>
                 </IonMenu>
                 <IonRouterOutlet id="main">
-                    <Route exact path="/app/home" component={Home}> </Route>
+                    <Route exact path="/app/home" component={Home} />
                     <Route exact path="/app">
                     <Redirect to="/app/home" /> 
                     </Route>

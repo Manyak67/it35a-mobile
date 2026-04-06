@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import DateTime from '../components/DateTime';
 import './Home.css';
+import Modal from '../components/Modal';
 
 const Home: React.FC = () => {
   return (
@@ -17,8 +17,8 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
-        <DateTime />
+        <ExploreContainer name="Home page" />
+        <Modal />
       </IonContent>
     </IonPage>
   );
