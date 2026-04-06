@@ -1,11 +1,14 @@
-import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonMenu, IonMenuButton, IonMenuToggle, IonPage, IonRouterOutlet, IonSplitPane, IonTitle, IonToolbar } from "@ionic/react"
+import { IonButton, IonContent, IonHeader, IonIcon, IonItem, IonMenu, IonMenuButton, IonMenuToggle, IonPage, IonRouterOutlet, IonSplitPane, IonTitle, IonToolbar } from "@ionic/react"
 import { Route, Redirect } from "react-router";
+import { homeOutline, logInOutline, logOutOutline } from "ionicons/icons";
 import Home from "./Home";
-import template from "./Template";
+import Login from "./login";
+
 
 const Menu: React.FC = () => {
     const path = [
-        {name: 'Home', url:'/app/home', icon:homeOutline}
+        {name: 'Home', url:'/app/home', icon:homeOutline},
+        {name: 'Login', url:'/app/login', icon:logInOutline}
 
     ];
     return (
@@ -37,6 +40,7 @@ const Menu: React.FC = () => {
                 </IonMenu>
                 <IonRouterOutlet id="main">
                     <Route exact path="/app/home" component={Home}> </Route>
+                    <Route exact path="/app/login" component={Login}> </Route>
                     <Route exact path="/app">
                     <Redirect to="/app/home" /> 
                     </Route>
@@ -49,4 +53,4 @@ const Menu: React.FC = () => {
 
 
 
-export default template;
+export default Menu;
