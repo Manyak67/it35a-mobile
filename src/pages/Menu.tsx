@@ -3,12 +3,10 @@ import { homeOutline, informationCircleOutline, logOutOutline } from "ionicons/i
 import { Redirect, Route } from "react-router-dom"
 import Home from "./Home"
 import About from "./About"
-
 const Menu: React.FC = () => {
     const path = [
         { name: 'Home', url: '/app/home', icon: homeOutline },
         { name: 'About', url: '/app/about', icon: informationCircleOutline }
-
     ];
     return (
         <IonPage>
@@ -18,19 +16,15 @@ const Menu: React.FC = () => {
                         <IonTitle>Menu</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-
                 <IonContent>
-
                     {path.map((item, index) => (
                         <IonMenuToggle key={index}>
                             <IonItem routerLink={item.url} routerDirection="forward">
-                                <IonIcon icon={item.icon}
-                                    slot="start"></IonIcon>
+                                <IonIcon icon={item.icon} slot="start"></IonIcon>
                                 {item.name}
                             </IonItem>
                         </IonMenuToggle>
                     ))}
-
                     <IonButton routerLink="/" routerDirection="back" expand="full">
                         <IonIcon icon={logOutOutline} slot="start"></IonIcon>
                         Logout
@@ -45,8 +39,6 @@ const Menu: React.FC = () => {
                 <Route exact path="/app/about" component={About} />
             </IonRouterOutlet>
         </IonPage>
-
     );
 };
-
 export default Menu;
